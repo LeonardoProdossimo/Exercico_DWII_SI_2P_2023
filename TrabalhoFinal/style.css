@@ -63,7 +63,7 @@ input, select, .divBotao {
     box-shadow: 1px 1px 3px 0px gray;
 }
 
-.divBotao {
+.divBotao, .divBotaoPopup {
     margin-top: 5vh;
     background-color: var(--corPadrao);
     border: 1px solid var(--corPadrao);
@@ -75,6 +75,21 @@ input, select, .divBotao {
     justify-content: center;
     align-items: center;
     cursor: pointer;
+}
+
+.divBotaoPopup{
+    margin: 0 auto;
+    max-width: 60%;
+}
+
+.popup{
+    border-radius: 8px;
+    background-color: #b3a4a4;
+    border: 1px solid var(--corPadrao);
+    padding: 20px;
+    min-width: 10vw;
+    min-height: 10vh;
+    display: none;
 }
 
 #tabela {

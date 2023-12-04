@@ -9,7 +9,7 @@ function temaDark(){
     document.querySelector("#body-index").style.background = "#302d2d";
     document.querySelector(".divBotao").style.background = "white";
     document.querySelector(".divBotao").style.color = "#302d2d";
-
+    
     var h1 = document.getElementsByTagName("h1");
     for (var i = 0; i < h1.length; i++) {
         h1[i].style.color = "white";
@@ -24,20 +24,34 @@ function temaDark(){
     for (var i = 0; i < input.length; i++) {
         input[i].style.background = "white";
     }
+
+    var popupback = document.querySelector(".popup");
+    for (var i = 0; i < popupback.length; i++) {
+        popupback[i].style.background = "#302d2d";
+    }
+
+    var popupcolor = document.querySelector(".popup");
+    for (var i = 0; i < popupcolor.length; i++) {
+        popupcolor[i].style.color = "black";
+    }
+
+    document.querySelector(".divBotaoPopup").style.color = "black";
+    document.querySelector(".divBotaoPopup").style.background = "white";
 }
 
 function inserir() {
     var itens = JSON.parse(localStorage.getItem("listaLivros")) == null ? [] : JSON.parse(localStorage.getItem("listaLivros"));
 
-    if ((document.getElementById("tituloLivro").value == "") ||
-        (document.getElementById("categoriaLivro").value == "") ||
-        (document.getElementById("autorLivro").value == "") ||
-        (document.getElementById("anoLivro").value == "" ) ||
-        (document.getElementById("editoraLivro").value == "")) {
-        alert("Todos os campos são obrigatórios");
+    if ((document.getElementById("tituloLivro").value == "")
+        || (document.getElementById("categoriaLivro").value == "")
+        || (document.getElementById("autorLivro").value == "")
+        || (document.getElementById("anoLivro").value == "" )
+        || (document.getElementById("editoraLivro").value == "")) {
+            popup(1);
+
     }else if((document.getElementById("anoLivro").value.length !== 4 )){
         document.getElementById("anoLivro").value = "" 
-        alert("O ano do livro deve conter 4 digitos");
+        popup(2);
     }else {
         var objeto = {
             "titulo": document.getElementById("tituloLivro").value,
@@ -92,4 +106,23 @@ function excluir(index) {
     listaLivros.splice(index, 1);
     localStorage.setItem("listaLivros", JSON.stringify(listaLivros));
     listar();
+}
+
+function popup(tipo) {
+    if (tipo == 1) {
+        var popup = document.getElementById("popup01");
+    } else {
+        var popup = document.getElementById("popup02");
+    }
+    popup.style.zIndex = "2";
+    popup.style.display = "block";
+    popup.style.position = "fixed";
+    popup.style.top = "50%";
+    popup.style.left = "50%";
+    popup.style.transform = "translate(-50%, -50%)";
+}
+
+function ok(){
+    document.getElementById("popup01").style.display = "none"
+    document.getElementById("popup02").style.display = "none"
 }

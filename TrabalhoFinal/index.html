@@ -1,55 +1,69 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cadastro de Livros</title>
-    <link rel="stylesheet" href="style.css">
-</head>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Cadastro de Livros</title>
+        <link rel="stylesheet" href="style.css">
+        <link rel="shortcut icon" href="icone/e-book.png" type="image/x-icon">
+    </head>
 
-<body id="body-index">
-    <div class="formulario">
-        <div id="titulo">
-            <h1>Cadastro de Livros</h1>
-            <div>
-                <div id="temadark" onclick="temaDark()"></div>
-                <div id="temaclaro" onclick="temaClaro()"></div>
+    <body id="body-index">
+        <div id="popup01" class="popup">
+            <h3>Todos os campos são obrigatórios!</h3>
+            <div class="divBotaoPopup" onClick="ok()">
+                OK
             </div>
         </div>
-        <label for="tituloLivro">
-            <h3>Título</h3>
-            <input type="text" name="tituloLivro" id="tituloLivro" placeholder="Digite o titulo do livro...">
-        </label>
-        <label for="categoriaLivro">
-            <h3>Categoria</h3>
-            <select name="categoriaLivro" id="categoriaLivro">
-                <option value="">Selecione uma categoria</option>
-                <option value="Ficção">Ficção</option>
-                <option value="Mistério">Mistério</option>
-                <option value="Aventura">Aventura</option>
-                <option value="Romance">Romance</option>
-                <option value="História">História</option>
-            </select>
-        </label>
-        <label for="autorLivro">
-            <h3>Autor</h3>
-            <input type="text" name="autorLivro" id="autorLivro" placeholder="Digite o autor do livro...">
-        </label>
-        <label for="anoLivro">
-            <h3>Ano de publicação</h3>
-            <input type="number" name="anoLivro" id="anoLivro" placeholder="Digite o ano de publicação (Ex: 2023)...">
-        </label>
-        <label for="editoraLivro">
-            <h3>Editora</h3>
-            <input type="text" name="editoraLivro" id="editoraLivro" placeholder="Digite a editora do livro...">
-        </label>
-        <div class="divBotao" onClick="inserir()">
-            Inserir
+        <div id="popup02" class="popup">
+            <h3>O ano do livro deve conter 4 digitos!</h3>
+            <div class="divBotaoPopup" onClick="ok()">
+                OK
+            </div>
         </div>
-    </div>
-    <table id="tabela"></table>
-    <script src="index.js"></script>
-</body>
+
+        <div class="formulario">
+            <div id="titulo">
+                <h1>Cadastro de Livros</h1>
+                <div>
+                    <div id="temadark" onclick="temaDark()"></div>
+                    <div id="temaclaro" onclick="temaClaro()"></div>
+                </div>
+            </div>
+            <label for="tituloLivro">
+                <h3>Título</h3>
+                <input type="text" name="tituloLivro" id="tituloLivro" placeholder="Digite o titulo do livro...">
+            </label>
+            <label for="categoriaLivro">
+                <h3>Categoria</h3>
+                <select name="categoriaLivro" id="categoriaLivro">
+                    <option value="">Selecione uma categoria</option>
+                    <option value="Ficção">Ficção</option>
+                    <option value="Mistério">Mistério</option>
+                    <option value="Aventura">Aventura</option>
+                    <option value="Romance">Romance</option>
+                    <option value="História">História</option>
+                </select>
+            </label>
+            <label for="autorLivro">
+                <h3>Autor</h3>
+                <input type="text" name="autorLivro" id="autorLivro" placeholder="Digite o autor do livro...">
+            </label>
+            <label for="anoLivro">
+                <h3>Ano de publicação</h3>
+                <input type="number" name="anoLivro" id="anoLivro" placeholder="Digite o ano de publicação (Ex: 2023)...">
+            </label>
+            <label for="editoraLivro">
+                <h3>Editora</h3>
+                <input type="text" name="editoraLivro" id="editoraLivro" placeholder="Digite a editora do livro...">
+            </label>
+            <div class="divBotao" onClick="inserir()">
+                Inserir
+            </div>
+        </div>
+        <table id="tabela"></table>
+        <script src="index.js"></script>
+    </body>
 
 </html>
