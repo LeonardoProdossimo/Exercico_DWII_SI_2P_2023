@@ -12,34 +12,45 @@ function temaDark(){
     document.querySelector(".formulario").style.borderColor = "white";
     document.querySelector(".divTabela").style.borderColor = "white";
     document.querySelector("#body-index").style.background = "#302d2d";
-    document.querySelector(".divBotao").style.background = "white";
-    document.querySelector(".divBotao").style.color = "#302d2d";
-    
-    var h1 = document.getElementsByTagName("h1");
-    for (var i = 0; i < h1.length; i++) {
-        h1[i].style.color = "white";
-    }
 
-    var h3 = document.getElementsByTagName("h3");
-    for (var i = 0; i < h3.length; i++) {
-        h3[i].style.color = "white";
-    }
+    document.querySelectorAll("h1").forEach(function (element) {
+        element.style.color = "white";
+    }); 
 
-    var input = document.getElementsByTagName("input");
-    for (var i = 0; i < input.length; i++) {
-        input[i].style.background = "white";
-    }
+    document.querySelectorAll("h3").forEach(function (element) {
+        element.style.color = "white";
+    });
 
-    var popupback = document.getElementsByClassName("popup");
-    for (var i = 0; i < popupback.length; i++) {
-        popupback[i].style.background = "#413d3d";
-    }
+    document.querySelectorAll("input").forEach(function (element) {
+        element.style.background = "white";
+    });
 
-    var btnpopup = document.getElementsByClassName("divBotaoPopup");
-    for (var i = 0; i < btnpopup.length; i++) {
-        btnpopup[i].style.color = "black";
-        btnpopup[i].style.background = "white";
-    }
+    document.querySelectorAll(".popup").forEach(function (element) {
+        element.style.background = "#413d3d";
+        element.style.borderColor = "white";
+    });
+
+    document.querySelectorAll(".divBotaoPopup").forEach(function (element) {
+        element.style.color = "black";
+        element.style.background = "white";
+        element.addEventListener("mouseover", function() {
+            element.style.background = "#d4c8c8";
+        });
+        element.addEventListener("mouseout", function() {
+            element.style.background = "white";
+        });
+    });
+
+    document.querySelectorAll(".divBotao").forEach(function (element) {
+        element.style.color = "black";
+        element.style.background = "white";
+        element.addEventListener("mouseover", function() {
+            element.style.background = "#d4c8c8";
+        });
+        element.addEventListener("mouseout", function() {
+            element.style.background = "white";
+        });
+    });
 }
 
 function inserir() {

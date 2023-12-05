@@ -37,15 +37,29 @@ body{
 .formulario{
     position: relative;
     box-shadow: 1px 1px 3px rgba(151, 150, 150, 0.589);
-    padding: 3vw;
+    padding: 2.5vw;
     display: flex;
     flex-direction: column;
     border: 1px solid rgba(128, 128, 128, 0.658);
     border-radius: 8px;
-    width: 35vw;
-    max-height: 85vh;
+    min-width: 40vw;
+    min-height: 85vh;
     background-color: rgb(255, 255, 255);
-    margin-top: 1vh;
+    margin-top: 0.8vh;
+}
+
+.divTabela {
+    position: relative;
+    background-color: rgb(255, 255, 255);
+    position: relative;
+    box-shadow: 1px 1px 3px rgba(151, 150, 150, 0.589);
+    padding: 1vw;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid rgba(128, 128, 128, 0.658);
+    border-radius: 8px;
+    min-height: 94vh;
+    margin-top: 0.8vh;
 }
 
 h1{
@@ -62,6 +76,10 @@ input, select, .divBotao {
     background-color: #fafafa;
     border: 1px solid #fafafa;
     box-shadow: 1px 1px 3px 0px gray;
+}
+
+.divBotao:hover, .divBotaoPopup:hover{
+    background-color: #201f1f91;
 }
 
 .divBotao, .divBotaoPopup {
@@ -96,25 +114,10 @@ input, select, .divBotao {
 .popup{
     border-radius: 8px;
     background-color: #f8f4f4;
-    border: 1px solid var(--corPadrao);
+    border: 2px solid var(--corPadrao);
     padding: 20px;
-    min-width: 10vw;
-    min-height: 10vh;
     display: none;
     font-size: xx-large;
-}
-.divTabela {
-    position: relative;
-    background-color: rgb(255, 255, 255);
-    position: relative;
-    box-shadow: 1px 1px 3px rgba(151, 150, 150, 0.589);
-    padding: 1vw;
-    display: flex;
-    flex-direction: column;
-    border: 1px solid rgba(128, 128, 128, 0.658);
-    border-radius: 8px;
-    min-height: 94vh;
-    margin-top: 1vh;
 }
 
 #tabela {
@@ -125,8 +128,8 @@ input, select, .divBotao {
 }
 
 #tabela th, #tabela td {
-    background-color: white;
-    border: 1px solid #ddd;
+    background-color: rgb(255, 255, 255);
+    border: 1px solid #413e3e;
     padding: 1vh;
     text-align: left;
 }
