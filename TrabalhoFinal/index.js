@@ -5,7 +5,12 @@ function temaClaro(){
 }
 
 function temaDark(){
+    document.querySelector("#temadark").style.borderColor = "white";
+    document.querySelector("#temaclaro").style.borderColor = "white";
+    document.querySelector(".divTabela").style.background = "#302d2d";
     document.querySelector(".formulario").style.background = "#302d2d";
+    document.querySelector(".formulario").style.borderColor = "white";
+    document.querySelector(".divTabela").style.borderColor = "white";
     document.querySelector("#body-index").style.background = "#302d2d";
     document.querySelector(".divBotao").style.background = "white";
     document.querySelector(".divBotao").style.color = "#302d2d";
@@ -25,18 +30,16 @@ function temaDark(){
         input[i].style.background = "white";
     }
 
-    var popupback = document.querySelector(".popup");
+    var popupback = document.getElementsByClassName("popup");
     for (var i = 0; i < popupback.length; i++) {
-        popupback[i].style.background = "#302d2d";
+        popupback[i].style.background = "#413d3d";
     }
 
-    var popupcolor = document.querySelector(".popup");
-    for (var i = 0; i < popupcolor.length; i++) {
-        popupcolor[i].style.color = "black";
+    var btnpopup = document.getElementsByClassName("divBotaoPopup");
+    for (var i = 0; i < btnpopup.length; i++) {
+        btnpopup[i].style.color = "black";
+        btnpopup[i].style.background = "white";
     }
-
-    document.querySelector(".divBotaoPopup").style.color = "black";
-    document.querySelector(".divBotaoPopup").style.background = "white";
 }
 
 function inserir() {
@@ -109,6 +112,15 @@ function excluir(index) {
 }
 
 function popup(tipo) {
+    document.querySelectorAll(".popup").forEach(function (element) {
+        element.style.display = "none";
+    });
+
+    var fosco = document.getElementById("fosco");
+    fosco.style.zIndex = "1";
+    fosco.style.display = "block"
+    fosco.style.position = "fixed";
+
     if (tipo == 1) {
         var popup = document.getElementById("popup01");
     } else {
@@ -123,6 +135,7 @@ function popup(tipo) {
 }
 
 function ok(){
-    document.getElementById("popup01").style.display = "none"
-    document.getElementById("popup02").style.display = "none"
+    document.getElementById("fosco").style.display = "none";
+    document.getElementById("popup01").style.display = "none";
+    document.getElementById("popup02").style.display = "none";
 }
