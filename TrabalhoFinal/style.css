@@ -37,7 +37,7 @@ body{
 .formulario{
     position: relative;
     box-shadow: 1px 1px 3px rgba(151, 150, 150, 0.589);
-    padding: 2.5vw;
+    padding: 1.8vw;
     display: flex;
     flex-direction: column;
     border: 1px solid rgba(128, 128, 128, 0.658);
@@ -45,7 +45,7 @@ body{
     min-width: 40vw;
     min-height: 85vh;
     background-color: rgb(255, 255, 255);
-    margin-top: 0.8vh;
+    margin-top: 0.5vh;
 }
 
 .divTabela {
@@ -58,8 +58,9 @@ body{
     flex-direction: column;
     border: 1px solid rgba(128, 128, 128, 0.658);
     border-radius: 8px;
-    min-height: 94vh;
-    margin-top: 0.8vh;
+    min-height: 90.9vh;
+    max-width: 47vw;
+    margin: 0.8vh;
 }
 
 h1{
@@ -122,7 +123,7 @@ input, select, .divBotao {
 
 #tabela {
     border-collapse: collapse;
-    min-width: 45vw;
+    max-width: 45vw;
     margin: 1vh 0px;
     cursor: pointer;
 }
@@ -142,4 +143,8 @@ input, select, .divBotao {
     color: red;
     text-decoration: none;
     cursor: pointer;
+}
+
+#tabela a:hover{
+    text-decoration: underline;
 }
